@@ -115,6 +115,9 @@ function generateOneNumber(){
 
     return true;
 }
+$('body').on('touchmove', function (event) {
+event.preventDefault();
+});
 
 $(document).keydown( function( event ){
 
@@ -164,7 +167,7 @@ document.addEventListener('touchend',function (event) {
     endy = event.changedTouches[0].pageY;
     var deltax = endx - startx;
     var deltay = endy - starty;
-    if (Math.abs(deltax) < 0.3*documentWidth && Math.abs(deltay) < 0.3*documentWidth) {
+    if (Math.abs(deltax) < 0.2*documentWidth && Math.abs(deltay) < 0.2*documentWidth) {
         return;
     }
     //x
